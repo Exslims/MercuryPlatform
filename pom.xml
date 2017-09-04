@@ -8,11 +8,12 @@
     <artifactId>mercury-platform</artifactId>
     <name>MercuryPlatform</name>
     <groupId>com.mercury.platfrom</groupId>
-    <version>0.0.0</version>
+    <version>0.0.1-SNAPSHOT</version>
 
-    <properties>
-        <maven-war-plugin-version>3.0.0</maven-war-plugin-version>
-        <frontend-maven-plugin-version>1.1</frontend-maven-plugin-version>
-    </properties>
+    <modules>
+        <module>client</module>
+        <module>data-service</module>
+    </modules>
+
 
 </project>
