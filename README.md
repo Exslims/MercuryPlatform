@@ -1,1 +1,14 @@
-# По ходу дела будет добавляться инфа о том что предстоит сделать
+IDEA + git showcase: 
+
+---
+
+prod build: mvn clean install
+
+---
+
+Run/Debug configurations:
+
+---
+
+Front-end
+
