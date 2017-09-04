@@ -5,6 +5,10 @@ https://www.youtube.com/watch?v=PXaXj5PFuVM&feature=youtu.be
 
 ## build: mvn clean install
 
+server host: http://localhost:8090
+
+frontend host: http://localhost:8080
+
 ---
 
 ## Run/Debug configurations:
