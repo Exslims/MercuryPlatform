@@ -1,14 +1,19 @@
-IDEA + git showcase: 
+## IDEA + git showcase: 
 
 ---
 
-prod build: mvn clean install
+## prod build: mvn clean install
 
 ---
 
-Run/Debug configurations:
+## Run/Debug configurations:
 
+### Front-end
+
+<img src="http://s01.geekpic.net/di-TDLBUL.png"/>
+
+### Spring boot
+
+
+<img src="http://s01.geekpic.net/di-Y28O4E.png"/>
 ---
-
-Front-end
-
