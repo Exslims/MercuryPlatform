@@ -2,7 +2,7 @@
 
 ---
 
-## prod build: mvn clean install
+## build: mvn clean install
 
 ---
 
