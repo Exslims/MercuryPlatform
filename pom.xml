@@ -14,6 +14,7 @@
         <module>client</module>
         <module>local-server</module>
         <module>data-service</module>
+        <module>socket-server</module>
     </modules>
 
     <properties>

@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from "@angular/core/testing";
 
-import { AppComponent } from './app.component';
+import {AppComponent} from "../../../../app/mercury/experimental/app.component";
 
 describe('App', () => {
     beforeEach(() => {
