@@ -1,3 +1,5 @@
+<img src="https://travis-ci.org/Exslims/MercuryPlatform.svg?branch=master"/>
+
 ## IDEA + git showcase: 
 https://www.youtube.com/watch?v=PXaXj5PFuVM&feature=youtu.be
 
