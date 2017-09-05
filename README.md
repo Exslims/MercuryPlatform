@@ -1,8 +1,23 @@
 ## IDEA + git showcase: 
+https://www.youtube.com/watch?v=PXaXj5PFuVM&feature=youtu.be
 
 ---
 
 ## build: mvn clean install
+
+server host: http://localhost:8090
+
+frontend host: http://localhost:8080
+
+---
+
+## Процессы
+
+- Все новые ветки с фичами отводятся от develop.
+- именование: feature/название фичи или имя тикета
+- Как только фича закончена и всё собирается делает пул реквест
+- Если есть конфилкты мержа резолвите, я мержу в депелоп
+- Детальнее в видео IDEA + git showcase
 
 ---
 
