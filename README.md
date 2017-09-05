@@ -1,6 +1,6 @@
 <img src="https://travis-ci.org/Exslims/MercuryPlatform.svg?branch=master"/>
 
-## IDEA + git showcase: 
+## IDEA + git showcase + процессы: 
 https://www.youtube.com/watch?v=PXaXj5PFuVM&feature=youtu.be
 
 ---
@@ -27,10 +27,10 @@ frontend host: http://localhost:8080
 
 - Все новые ветки с фичами отводятся от develop.
 - именование: feature/название фичи или имя тикета
-- Как только фича закончена и всё собирается делает пул реквест
-- Если есть конфилкты мержа резолвите, я мержу в депелоп
+- Как только фича закончена и всё собирается делаете пул реквест
+- Если есть конфликты мержа резолвите, я мержу в депелоп
 - Детальнее в видео IDEA + git showcase
-- Поставить эти галочки в окне логина + не забывать использовать самому автоформатирование идеи. Ctrl + alt + L Ctrl + alt + O
+- Поставить эти галочки в окне коммита + не забывать использовать самому автоформатирование идеи. Ctrl + alt + L Ctrl + alt + O
 
 <img src="http://s01.geekpic.net/di-7AJWG7.png"/>
 
