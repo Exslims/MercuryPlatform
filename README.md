@@ -1,4 +1,4 @@
-<img src="https://travis-ci.org/Exslims/MercuryPlatform.svg?branch=master"/>
+<img src="https://travis-ci.org/Exslims/MercuryPlatform.svg?branch=develop"/>
 
 ## IDEA + git showcase: 
 https://www.youtube.com/watch?v=PXaXj5PFuVM&feature=youtu.be
