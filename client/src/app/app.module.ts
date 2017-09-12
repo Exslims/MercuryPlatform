@@ -1,11 +1,11 @@
-require("style-loader!../assets/base.less");
-
+import {ClarityModule} from "clarity-angular";
 import {BrowserModule, HammerGestureConfig} from "@angular/platform-browser";
 import {NgRoutingModule} from "./ng-routing.module";
 import {AppComponent} from "./app.component";
 import {createInputTransfer, createNewHosts, removeNgStyles} from "@angularclass/hmr";
 import {ApplicationRef, NgModule} from "@angular/core";
 import {HomeModule} from "./modules/home/home.module";
+require("style-loader!../assets/base.less");
 
 
 export class MyHammerConfig extends HammerGestureConfig {
@@ -19,6 +19,7 @@ export class MyHammerConfig extends HammerGestureConfig {
         AppComponent,
     ],
     imports: [
+        ClarityModule.forRoot(),
         BrowserModule,
         HomeModule,
         NgRoutingModule

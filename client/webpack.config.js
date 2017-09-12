@@ -18,7 +18,6 @@ const isProdServer = ENV.includes('prodServer');
 
 
 module.exports = function makeWebpackConfig() {
-
     console.log(`You are in ${ENV} mode`);
 
     let config = {};
@@ -56,7 +55,7 @@ module.exports = function makeWebpackConfig() {
     }
 
     config.resolve = {
-        extensions: ['.ts', '.js', '.json', '.html', '.less', '.svg']
+        extensions: ['.ts', '.js', '.json', '.html', '.less', '.svg', '.css']
     };
 
     config.module = {
@@ -91,6 +90,14 @@ module.exports = function makeWebpackConfig() {
                     {loader: "css-loader"},
                     {loader: "postcss-loader"},
                     {loader: "less-loader"}
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {loader: "css-to-string-loader"},
+                    {loader: "css-loader"},
+                    {loader: "postcss-loader"}
                 ]
             }
         ]
