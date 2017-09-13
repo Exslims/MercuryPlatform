@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+        Header
+    </div>
+    <div class="card-block">
+        <div class="card-title">
+            Block
+        </div>
+        <div class="card-text">
+            ...
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-sm btn-link">
+            Action 1
+        </button>
+        <button class="btn btn-sm btn-link">
+            Action 2
+        </button>
+        <clr-dropdown>
+            <button class="dropdown-toggle btn btn-sm btn-link" clrDropdownTrigger>
+                Dropdown 1
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu *clrIfOpen clrPosition="top-right">
+                <a href="..." clrDropdownItem>About</a>
+                <a href="..." clrDropdownItem>Preferences</a>
+                <a href="..." clrDropdownItem>Log out</a>
+            </clr-dropdown-menu>
+        </clr-dropdown>
+    </div>
+</div>

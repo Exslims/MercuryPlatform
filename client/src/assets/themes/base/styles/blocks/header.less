@@ -1,12 +1,45 @@
 @import "../common/fonts";
 
-.header.header-6 {
-  //.font-bold();
-  //background-color: #4e5c7e;
-  //
-  //&__label {
-  //  .font-bold();
-  //  font-size: 1.2em;
-  //  -webkit-font-smoothing: antialiased;
-  //}
+.ux-header {
+  display: flex;
+  height: 60px;
+  white-space: nowrap;
+  background-color: #4e5c7e;
+  .font-bold();
+  -webkit-font-smoothing: antialiased;
+
+  &__navbar {
+    display: flex;
+
+    &-item {
+      .font-bold();
+      font-size: 18px;
+      margin: 10px 20px;
+      text-align: center;
+      border-radius: 7px;
+      border: solid 2px transparent;
+      transition: border ease 0.2s;
+
+      &:hover {
+        border: solid 2px #eaf2f9;
+      }
+      &_selected {
+
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.6em;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  &__branding {
+    display: flex;
+    min-width: 240px;
+    padding: 0 24px;
+    flex: 0 0 auto;
+    font-size: 1.2em;
+    -webkit-font-smoothing: antialiased;
+  }
 }

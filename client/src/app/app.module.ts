@@ -6,6 +6,8 @@ import {createInputTransfer, createNewHosts, removeNgStyles} from "@angularclass
 import {ApplicationRef, NgModule} from "@angular/core";
 import {HomeModule} from "./modules/home/home.module";
 require("style-loader!../assets/base.less");
+require("script-loader!../../node_modules/@webcomponents/custom-elements/custom-elements.min.js");
+require("script-loader!../../node_modules/clarity-icons/clarity-icons.min.js");
 
 
 export class MyHammerConfig extends HammerGestureConfig {

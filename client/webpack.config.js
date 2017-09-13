@@ -99,6 +99,10 @@ module.exports = function makeWebpackConfig() {
                     {loader: "css-loader"},
                     {loader: "postcss-loader"}
                 ]
+            },
+            {
+                test: /\.exec\.js$/,
+                use: ['script-loader']
             }
         ]
     };
