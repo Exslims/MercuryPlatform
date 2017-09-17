@@ -12,6 +12,4 @@
         <artifactId>mercury-platform</artifactId>
         <version>${mercury.version}</version>
     </parent>
-
-
 </project>
