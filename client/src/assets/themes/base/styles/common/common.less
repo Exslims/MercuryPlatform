@@ -1,52 +1,128 @@
-@import "./fonts";
+@import "common-vars";
 
 * {
-  box-sizing: border-box;
-
-  &:before,
-  &:after {
     box-sizing: border-box;
-  }
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-  font-family: @font-family;
+    .font-regular();
+    font-size: 14px;
+    background-color: #eaedf1;
+
+    &._white {
+        background-color: #fff;
+    }
 }
 
 ._margin_no {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 0;
+    margin: 0;
 }
 
 ul, li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
 a {
-  &,
-  &:hover,
-  &:focus,
-  &:active {
-    cursor: pointer;
-    text-decoration: none;
+    &,
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:focus,
+    &:active {
+        color: inherit;
+    }
+}
+
+button {
+    background: none;
     outline: none;
-  }
+    border: none;
+    padding: 0;
+}
 
-  &,
-  &:visited {
-  }
+// input type value - hide arrow
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 
-  &:hover,
-  &:focus,
-  &:active {
-  }
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input:focus {
+    outline: none;
+}
+
+._hide,
+._hidden {
+    display: none;
+}
+
+/* checkbox styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #f8bf4c;
+    background: #fff;
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '';
+    width: 11px;
+    height: 8px;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    background: url(../../images/icons/checkbox-checked.png) left center no-repeat;
 
 }
+
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+

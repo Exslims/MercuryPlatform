@@ -1,15 +1,11 @@
-import {Component, HostBinding, OnInit} from "@angular/core";
+import {Component} from "@angular/core";
 
 @Component({
-    selector: 'app-component',
-    templateUrl: './app.component.html'
+    selector: "mp-root",
+    templateUrl: "app.component.html"
 })
-export class AppComponent implements OnInit {
-    @HostBinding('class') classes = 'app-component';
+export class AppComponent {
 
     constructor() {
-    }
-
-    ngOnInit() {
     }
 }

@@ -1,0 +1,1 @@
+require("@yworks/yfiles-html/dist/license.js");

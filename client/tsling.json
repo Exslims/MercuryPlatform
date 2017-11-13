@@ -22,15 +22,17 @@
       "allow-undefined-check"
     ],
     "semicolon": [
-      true,
-      "always",
-      "ignore-interfaces"
+        false
     ],
     "variable-name": [
       true,
       "ban-keywords",
       "check-format",
       "allow-leading-underscore"
+    ],
+      "quotemark": [
+          true,
+          "double"
     ]
   }
 }

@@ -1,63 +1,28 @@
-import {ClarityModule} from "clarity-angular";
-import {BrowserModule, HammerGestureConfig} from "@angular/platform-browser";
-import {NgRoutingModule} from "./ng-routing.module";
+import {NgModule} from "@angular/core";
+import {HttpModule} from "@angular/http";
+import {BrowserModule} from "@angular/platform-browser";
+import {NoopAnimationsModule} from "@angular/platform-browser/animations";
+
+import {AppRoutingModule} from "./app-routing.module";
 import {AppComponent} from "./app.component";
-import {createInputTransfer, createNewHosts, removeNgStyles} from "@angularclass/hmr";
-import {ApplicationRef, NgModule} from "@angular/core";
-import {HomeModule} from "./modules/home/home.module";
-require("style-loader!../assets/base.less");
-require("script-loader!../../node_modules/@webcomponents/custom-elements/custom-elements.min.js");
-require("script-loader!../../node_modules/clarity-icons/clarity-icons.min.js");
-
-
-export class MyHammerConfig extends HammerGestureConfig {
-    overrides = <any>{
-        'swipe': {velocity: 0.4, threshold: 20} // override default settings
-    }
-}
+import {InformationService, NgSystemInformationService} from "../ng-system-information.service";
+import {EnvironmentService, NgSystemEnvironmentService} from "../ng-system-environment.service";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-    ],
     imports: [
-        ClarityModule.forRoot(),
         BrowserModule,
-        HomeModule,
-        NgRoutingModule
-    ],
-    providers: [],
-    bootstrap: [
+        AppRoutingModule,
+        HttpModule,
+        NoopAnimationsModule],
+    declarations: [
         AppComponent
-    ]
+    ],
+    providers: [
+        {provide: InformationService, useClass: NgSystemInformationService},
+        {provide: EnvironmentService, useClass: NgSystemEnvironmentService},
+        // PROVIDERS
+    ],
+    bootstrap: [AppComponent]
 })
-
 export class AppModule {
-    constructor(public appRef: ApplicationRef) {
-    }
-
-    hmrOnInit(store) {
-        if (!store || !store.state) return;
-
-        if ('restoreInputValues' in store) {
-            store.restoreInputValues();
-        }
-
-        this.appRef.tick();
-        delete store.state;
-        delete store.restoreInputValues;
-    }
-
-    hmrOnDestroy(store) {
-        let cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
-        store.disposeOldHosts = createNewHosts(cmpLocation);
-        store.state = {data: 'yolo'};
-        store.restoreInputValues = createInputTransfer();
-        removeNgStyles();
-    }
-
-    hmrAfterDestroy(store) {
-        store.disposeOldHosts();
-        delete store.disposeOldHosts;
-    }
 }
